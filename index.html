@@ -3,29 +3,565 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>jasinski.app</title>
+  <meta name="description" content="Privacy policy for the Neta mobile app — driver earnings and net profit tracking." id="meta-description" />
+  <title>Privacy Policy — Neta</title>
   <style>
-    :root { --teal: #0F766E; --ink: #1A1A1A; --muted: #5C6670; }
+    :root {
+      --teal: #0F766E;
+      --teal-dark: #0B5C56;
+      --teal-light: #E6F4F2;
+      --ink: #1A1A1A;
+      --muted: #5C6670;
+      --border: #D8E2E0;
+      --bg: #F8FAFA;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      margin: 0; min-height: 100vh; display: grid; place-items: center;
-      font-family: "Segoe UI", system-ui, sans-serif; color: var(--ink);
-      background: linear-gradient(165deg, #0B5C56 0%, var(--teal) 55%, #14B8A6 100%);
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--ink);
+      line-height: 1.65;
+      background: var(--bg);
     }
-    main {
-      background: #fff; border-radius: 16px; padding: 2rem 1.75rem;
-      max-width: 28rem; margin: 1.5rem; text-align: center;
-      box-shadow: 0 12px 40px rgba(0,0,0,.18);
+    a { color: var(--teal); }
+    a:hover { color: var(--teal-dark); }
+    .header {
+      background: linear-gradient(165deg, var(--teal-dark) 0%, var(--teal) 55%, #14B8A6 100%);
+      color: #fff;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
     }
-    h1 { margin: 0 0 .5rem; font-size: 1.75rem; letter-spacing: .04em; }
-    p { margin: 0 0 1.25rem; color: var(--muted); line-height: 1.55; }
-    a { color: var(--teal); font-weight: 600; }
+    .header .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      margin: 0 0 0.25rem;
+    }
+    .header .tagline {
+      opacity: 0.9;
+      margin: 0 0 1rem;
+      font-size: 1rem;
+    }
+    .header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0 0 1.25rem;
+      opacity: 0.98;
+    }
+    .lang-switch {
+      display: inline-flex;
+      gap: 0.35rem;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 0.35rem;
+      border-radius: 999px;
+    }
+    .lang-switch button {
+      border: none;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.85);
+      font: inherit;
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+    .lang-switch button:hover { color: #fff; }
+    .lang-switch button.active {
+      background: #fff;
+      color: var(--teal-dark);
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+    .meta {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 2rem;
+      font-size: 0.925rem;
+      color: var(--muted);
+    }
+    .meta strong { color: var(--ink); }
+    nav.toc {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+    nav.toc h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin: 0 0 0.75rem;
+    }
+    nav.toc ol {
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+    nav.toc li { margin: 0.35rem 0; }
+    section {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 1.25rem;
+    }
+    section h2 {
+      color: var(--teal-dark);
+      font-size: 1.15rem;
+      margin: 0 0 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--teal-light);
+    }
+    section p { margin: 0 0 0.75rem; }
+    section p:last-child { margin-bottom: 0; }
+    ul {
+      margin: 0.5rem 0 0.75rem;
+      padding-left: 1.35rem;
+    }
+    li { margin: 0.35rem 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.925rem;
+      margin: 0.75rem 0;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.6rem 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--teal-light);
+      color: var(--teal-dark);
+      font-weight: 600;
+    }
+    .lang-panel[hidden] { display: none !important; }
+    .footer {
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--muted);
+      padding: 0 1.25rem 2.5rem;
+    }
+    .footer a { font-weight: 500; }
+    @media (max-width: 600px) {
+      .header { padding: 2rem 1rem 1.75rem; }
+      section { padding: 1.25rem; }
+      table { font-size: 0.85rem; }
+    }
   </style>
 </head>
 <body>
-  <main>
-    <h1>jasinski.app</h1>
-    <p>Site coming soon. Neta legal pages are already available.</p>
-    <p><a href="/neta/privacy/">Neta — Privacy Policy</a></p>
+  <header class="header">
+    <p class="logo">Neta</p>
+    <p class="tagline" id="header-tagline">Your net profit</p>
+    <h1 id="header-title">Privacy Policy</h1>
+    <nav class="lang-switch" aria-label="Language">
+      <button type="button" data-lang="pl">PL</button>
+      <button type="button" data-lang="en" class="active">EN</button>
+      <button type="button" data-lang="uk">UK</button>
+    </nav>
+  </header>
+
+  <!-- Polish -->
+  <main class="wrap lang-panel" data-lang="pl" id="panel-pl" hidden>
+    <div class="meta">
+      <strong>Ostatnia aktualizacja:</strong> 28 sierpnia 2026 r.<br />
+      <strong>Aplikacja:</strong> Neta (Android / iOS)<br />
+      <strong>Administrator danych:</strong> Kamil Jasiński — <a href="https://jasinski.app">jasinski.app</a><br />
+      <strong>Kontakt:</strong> <a href="mailto:kamil@jasinski.app">kamil@jasinski.app</a>
+    </div>
+    <nav class="toc" aria-label="Spis treści">
+      <h2>Spis treści</h2>
+      <ol>
+        <li><a href="#wstep">Wstęp</a></li>
+        <li><a href="#zakres">Zakres i role</a></li>
+        <li><a href="#dane">Jakie dane przetwarzamy</a></li>
+        <li><a href="#cele">Cele i podstawy prawne</a></li>
+        <li><a href="#odbiorcy">Odbiorcy danych</a></li>
+        <li><a href="#przechowywanie">Okres przechowywania</a></li>
+        <li><a href="#prawa">Twoje prawa</a></li>
+        <li><a href="#bezpieczenstwo">Bezpieczeństwo</a></li>
+        <li><a href="#dzieci">Dzieci</a></li>
+        <li><a href="#zmiany">Zmiany polityki</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ol>
+    </nav>
+    <section id="wstep">
+      <h2>1. Wstęp</h2>
+      <p>Niniejsza polityka prywatności opisuje, w jaki sposób aplikacja mobilna <strong>Neta</strong> („Aplikacja”) przetwarza dane osobowe użytkowników — kierowców korzystających z platform takich jak Uber, Bolt czy FreeNow — w celu ewidencji przychodów, kosztów i obliczania zysku netto.</p>
+      <p>Dbamy o przejrzystość i minimalizację danych: Neta <strong>nie łączy się</strong> z kontami Uber, Bolt ani innych platform przewozowych i <strong>nie pobiera</strong> danych bezpośrednio z tych serwisów. Wszystkie kwoty i wpisy wprowadzasz samodzielnie.</p>
+    </section>
+    <section id="zakres">
+      <h2>2. Zakres i role</h2>
+      <p>Administratorem danych osobowych w rozumieniu RODO jest właściciel serwisu <a href="https://jasinski.app">jasinski.app</a> (dalej: „Administrator”).</p>
+      <p>Dane konta i wpisy finansowe są przechowywane w infrastrukturze chmurowej <strong>Supabase</strong> (hosting bazy danych i uwierzytelniania). Supabase działa jako podmiot przetwarzający na podstawie umowy powierzenia z Administratorem, z serwerami w regionie UE, o ile nie wskazano inaczej w konfiguracji produkcyjnej.</p>
+    </section>
+    <section id="dane">
+      <h2>3. Jakie dane przetwarzamy</h2>
+      <table>
+        <thead><tr><th>Kategoria</th><th>Przykłady</th><th>Źródło</th></tr></thead>
+        <tbody>
+          <tr><td>Dane konta</td><td>Adres e-mail, hasło (hash), opcjonalnie imię i nazwisko</td><td>Podajesz przy rejestracji</td></tr>
+          <tr><td>Dane finansowe i operacyjne</td><td>Przychody, koszty, stałe koszty, napiwki gotówkowe, sesje pracy (godziny, km), notatki</td><td>Wprowadzasz w Aplikacji</td></tr>
+          <tr><td>Konfiguracja</td><td>Wybrane platformy, dane pojazdu, preferencje języka</td><td>Podajesz w onboarding / ustawieniach</td></tr>
+          <tr><td>Opinie i zgłoszenia</td><td>Treść zgłoszenia, typ, język interfejsu</td><td>Wysyłasz z ekranu feedbacku</td></tr>
+          <tr><td>Dane techniczne</td><td>Identyfikator użytkownika, znaczniki czasu, logi błędów (ograniczone)</td><td>Automatycznie przy korzystaniu</td></tr>
+        </tbody>
+      </table>
+      <p>Aplikacja <strong>nie zbiera</strong> lokalizacji GPS w tle, numeru telefonu (chyba że sam go podasz w profilu w przyszłości), ani danych płatniczych — Neta nie obsługuje płatności w aplikacji.</p>
+    </section>
+    <section id="cele">
+      <h2>4. Cele i podstawy prawne (RODO)</h2>
+      <ul>
+        <li><strong>Świadczenie usługi</strong> — konto, synchronizacja, pulpit i historia (<em>art. 6 ust. 1 lit. b RODO</em>).</li>
+        <li><strong>Obsługa zgłoszeń</strong> — analiza błędów i sugestii (<em>art. 6 ust. 1 lit. f RODO</em>).</li>
+        <li><strong>Bezpieczeństwo</strong> — ochrona kont (<em>art. 6 ust. 1 lit. f RODO</em>).</li>
+        <li><strong>Obowiązki prawne</strong> — gdy wymagają przepisy (<em>art. 6 ust. 1 lit. c RODO</em>).</li>
+      </ul>
+      <p>Marketing bezpośredni i profilowanie reklamowe <strong>nie są</strong> obecnie stosowane w Netcie.</p>
+    </section>
+    <section id="odbiorcy">
+      <h2>5. Odbiorcy danych</h2>
+      <p>Dane mogą być udostępniane wyłącznie:</p>
+      <ul>
+        <li><strong>Supabase Inc.</strong> — hosting bazy i uwierzytelnianie (processor).</li>
+        <li>Dostawcom infrastruktury (np. Apple App Store, Google Play — w zakresie dystrybucji).</li>
+        <li>Organom publicznym — na podstawie prawa.</li>
+      </ul>
+      <p>Nie sprzedajemy danych osobowych podmiotom trzecim.</p>
+    </section>
+    <section id="przechowywanie">
+      <h2>6. Okres przechowywania</h2>
+      <ul>
+        <li>Dane konta i wpisy — do <strong>usunięcia konta</strong> (Więcej → Konto → Usuń konto) lub żądania usunięcia.</li>
+        <li>Po usunięciu — trwałe skasowanie z bazy (kaskada), z wyjątkiem krótkotrwałych kopii zapasowych u hostingu.</li>
+        <li>Feedback — do rozpatrzenia i maks. 24 miesięcy archiwizacji.</li>
+      </ul>
+    </section>
+    <section id="prawa">
+      <h2>7. Twoje prawa</h2>
+      <p>Przysługuje Ci prawo do: dostępu, sprostowania, usunięcia, ograniczenia, przenoszenia danych, sprzeciwu oraz skargi do PUODO.</p>
+      <p>Usunięcie konta: <strong>Więcej → Konto → Usuń konto</strong>. Inne żądania: <a href="mailto:kamil@jasinski.app">kamil@jasinski.app</a>.</p>
+    </section>
+    <section id="bezpieczenstwo">
+      <h2>8. Bezpieczeństwo</h2>
+      <p>Stosujemy HTTPS/TLS, hashowanie haseł, Row Level Security w bazie (dostęp tylko do własnych danych) oraz kontrolę dostępu do środowiska produkcyjnego.</p>
+    </section>
+    <section id="dzieci">
+      <h2>9. Dzieci</h2>
+      <p>Aplikacja nie jest skierowana do osób poniżej 16 lat. Nie gromadzimy świadomie danych dzieci.</p>
+    </section>
+    <section id="zmiany">
+      <h2>10. Zmiany polityki</h2>
+      <p>Możemy aktualizować politykę w miarę rozwoju Aplikacji. O istotnych zmianach poinformujemy w Aplikacji lub na tej stronie.</p>
+    </section>
+    <section id="kontakt">
+      <h2>11. Kontakt</h2>
+      <ul>
+        <li>E-mail: <a href="mailto:kamil@jasinski.app">kamil@jasinski.app</a></li>
+        <li>Strona: <a href="https://jasinski.app">https://jasinski.app</a></li>
+      </ul>
+      <p>Android: <code>app.jasinski.neta</code> · iOS: <code>app.jasinski.neta</code></p>
+    </section>
   </main>
+
+  <!-- English -->
+  <main class="wrap lang-panel" data-lang="en" id="panel-en">
+    <div class="meta">
+      <strong>Last updated:</strong> August 28, 2026<br />
+      <strong>App:</strong> Neta (Android / iOS)<br />
+      <strong>Data controller:</strong> Kamil Jasiński — <a href="https://jasinski.app">jasinski.app</a><br />
+      <strong>Contact:</strong> <a href="mailto:kamil@jasinski.app">kamil@jasinski.app</a>
+    </div>
+    <nav class="toc" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#scope">Scope and roles</a></li>
+        <li><a href="#data">Data we process</a></li>
+        <li><a href="#purposes">Purposes and legal bases</a></li>
+        <li><a href="#recipients">Data recipients</a></li>
+        <li><a href="#retention">Retention</a></li>
+        <li><a href="#rights">Your rights</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#changes">Policy changes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+    <section id="intro">
+      <h2>1. Introduction</h2>
+      <p>This privacy policy explains how the mobile app <strong>Neta</strong> (the “App”) processes personal data of users — drivers using platforms such as Uber, Bolt, or FreeNow — to record earnings, expenses, and calculate net profit.</p>
+      <p>We minimize data collection: Neta <strong>does not connect</strong> to Uber, Bolt, or other ride-hailing accounts and <strong>does not fetch</strong> data from those services. All amounts and entries are entered by you.</p>
+    </section>
+    <section id="scope">
+      <h2>2. Scope and roles</h2>
+      <p>The data controller under the GDPR is the owner of <a href="https://jasinski.app">jasinski.app</a> (“Controller”).</p>
+      <p>Account and financial data are stored on <strong>Supabase</strong> (database and authentication hosting). Supabase acts as a processor under a data processing agreement, with servers in the EU region unless otherwise configured in production.</p>
+    </section>
+    <section id="data">
+      <h2>3. Data we process</h2>
+      <table>
+        <thead><tr><th>Category</th><th>Examples</th><th>Source</th></tr></thead>
+        <tbody>
+          <tr><td>Account</td><td>Email, password (hash), optional full name</td><td>You provide at sign-up</td></tr>
+          <tr><td>Financial &amp; operational</td><td>Earnings, expenses, fixed costs, cash tips, work sessions (hours, km), notes</td><td>You enter in the App</td></tr>
+          <tr><td>Configuration</td><td>Selected platforms, vehicle details, language preference</td><td>Onboarding / settings</td></tr>
+          <tr><td>Feedback</td><td>Message content, type, UI language</td><td>Feedback screen</td></tr>
+          <tr><td>Technical</td><td>User ID, timestamps, limited server error logs</td><td>Automatic when using the App</td></tr>
+        </tbody>
+      </table>
+      <p>The App <strong>does not collect</strong> background GPS location, phone numbers (unless you add them to your profile later), or payment card data — Neta does not process in-app payments.</p>
+    </section>
+    <section id="purposes">
+      <h2>4. Purposes and legal bases (GDPR)</h2>
+      <ul>
+        <li><strong>Service delivery</strong> — account, sync, dashboard, history (<em>Art. 6(1)(b) GDPR</em>).</li>
+        <li><strong>Feedback handling</strong> — bug reports and suggestions (<em>Art. 6(1)(f) GDPR</em>).</li>
+        <li><strong>Security</strong> — account protection (<em>Art. 6(1)(f) GDPR</em>).</li>
+        <li><strong>Legal obligations</strong> — when required by law (<em>Art. 6(1)(c) GDPR</em>).</li>
+      </ul>
+      <p>Direct marketing and advertising profiling are <strong>not</strong> used in Neta at this time.</p>
+    </section>
+    <section id="recipients">
+      <h2>5. Data recipients</h2>
+      <p>Data may be shared only with:</p>
+      <ul>
+        <li><strong>Supabase Inc.</strong> — database and auth hosting (processor).</li>
+        <li>Infrastructure providers (e.g. Apple App Store, Google Play — as required for distribution).</li>
+        <li>Public authorities — when required by law.</li>
+      </ul>
+      <p>We do not sell personal data to third parties.</p>
+    </section>
+    <section id="retention">
+      <h2>6. Retention</h2>
+      <ul>
+        <li>Account and entries — until <strong>account deletion</strong> (More → Account → Delete account) or a deletion request.</li>
+        <li>After deletion — permanent removal from the database (cascade), except brief backup copies at the host.</li>
+        <li>Feedback — until resolved and up to 24 months archived.</li>
+      </ul>
+    </section>
+    <section id="rights">
+      <h2>7. Your rights</h2>
+      <p>You have the right to access, rectify, erase, restrict, port your data, object to processing, and lodge a complaint with your supervisory authority.</p>
+      <p>Delete your account in the App: <strong>More → Account → Delete account</strong>. Other requests: <a href="mailto:kamil@jasinski.app">kamil@jasinski.app</a>.</p>
+    </section>
+    <section id="security">
+      <h2>8. Security</h2>
+      <p>We use HTTPS/TLS, password hashing, Row Level Security in the database (access only to your own rows), and access controls on production systems.</p>
+    </section>
+    <section id="children">
+      <h2>9. Children</h2>
+      <p>The App is not directed at anyone under 16. We do not knowingly collect children’s data.</p>
+    </section>
+    <section id="changes">
+      <h2>10. Policy changes</h2>
+      <p>We may update this policy as the App evolves. Material changes will be communicated in the App or on this page.</p>
+    </section>
+    <section id="contact">
+      <h2>11. Contact</h2>
+      <ul>
+        <li>Email: <a href="mailto:kamil@jasinski.app">kamil@jasinski.app</a></li>
+        <li>Website: <a href="https://jasinski.app">https://jasinski.app</a></li>
+      </ul>
+      <p>Android: <code>app.jasinski.neta</code> · iOS: <code>app.jasinski.neta</code></p>
+    </section>
+  </main>
+
+  <!-- Ukrainian -->
+  <main class="wrap lang-panel" data-lang="uk" id="panel-uk" hidden>
+    <div class="meta">
+      <strong>Останнє оновлення:</strong> 28 серпня 2026 р.<br />
+      <strong>Додаток:</strong> Neta (Android / iOS)<br />
+      <strong>Адміністратор даних:</strong> Kamil Jasiński — <a href="https://jasinski.app">jasinski.app</a><br />
+      <strong>Контакт:</strong> <a href="mailto:kamil@jasinski.app">kamil@jasinski.app</a>
+    </div>
+    <nav class="toc" aria-label="Зміст">
+      <h2>Зміст</h2>
+      <ol>
+        <li><a href="#vstup">Вступ</a></li>
+        <li><a href="#sfera">Сфера та ролі</a></li>
+        <li><a href="#dani">Які дані обробляємо</a></li>
+        <li><a href="#meta">Цілі та правові підстави</a></li>
+        <li><a href="#otrimuvachi">Одержувачі даних</a></li>
+        <li><a href="#zberigannya">Термін зберігання</a></li>
+        <li><a href="#prava">Ваші права</a></li>
+        <li><a href="#bezpeka">Безпека</a></li>
+        <li><a href="#dity">Діти</a></li>
+        <li><a href="#zminy">Зміни політики</a></li>
+        <li><a href="#kontakt-uk">Контакт</a></li>
+      </ol>
+    </nav>
+    <section id="vstup">
+      <h2>1. Вступ</h2>
+      <p>Ця політика конфіденційності описує, як мобільний додаток <strong>Neta</strong> («Додаток») обробляє персональні дані користувачів — водіїв платформ Uber, Bolt, FreeNow тощо — для обліку доходів, витрат і розрахунку чистого прибутку.</p>
+      <p>Neta <strong>не підключається</strong> до облікових записів Uber, Bolt чи інших сервісів і <strong>не отримує</strong> дані з них. Усі суми та записи ви вводите самостійно.</p>
+    </section>
+    <section id="sfera">
+      <h2>2. Сфера та ролі</h2>
+      <p>Адміністратором персональних даних за GDPR є власник <a href="https://jasinski.app">jasinski.app</a> («Адміністратор»).</p>
+      <p>Дані облікового запису та фінансові записи зберігаються в <strong>Supabase</strong> (хостинг БД та автентифікації). Supabase діє як обробник даних за договором, з серверами в регіоні ЄС, якщо інше не налаштовано в продакшені.</p>
+    </section>
+    <section id="dani">
+      <h2>3. Які дані обробляємо</h2>
+      <table>
+        <thead><tr><th>Категорія</th><th>Приклади</th><th>Джерело</th></tr></thead>
+        <tbody>
+          <tr><td>Обліковий запис</td><td>E-mail, пароль (хеш), опційно ім’я</td><td>При реєстрації</td></tr>
+          <tr><td>Фінансові та операційні</td><td>Доходи, витрати, постійні витрати, чайові готівкою, робочі сесії, нотатки</td><td>Ви вводите в Додатку</td></tr>
+          <tr><td>Налаштування</td><td>Платформи, дані авто, мова інтерфейсу</td><td>Онбординг / налаштування</td></tr>
+          <tr><td>Відгуки</td><td>Текст звернення, тип, мова</td><td>Екран feedback</td></tr>
+          <tr><td>Технічні</td><td>ID користувача, мітки часу, обмежені логи</td><td>Автоматично</td></tr>
+        </tbody>
+      </table>
+      <p>Додаток <strong>не збирає</strong> GPS у фоні, номер телефону (якщо ви самі не додасте) чи платіжні дані — Neta не обробляє платежі в додатку.</p>
+    </section>
+    <section id="meta">
+      <h2>4. Цілі та правові підстави (GDPR)</h2>
+      <ul>
+        <li><strong>Надання послуги</strong> — обліковий запис, синхронізація, панель, історія (<em>ст. 6(1)(b) GDPR</em>).</li>
+        <li><strong>Звернення</strong> — аналіз помилок і пропозицій (<em>ст. 6(1)(f) GDPR</em>).</li>
+        <li><strong>Безпека</strong> — захист облікових записів (<em>ст. 6(1)(f) GDPR</em>).</li>
+        <li><strong>Законні зобов’язання</strong> — коли вимагає закон (<em>ст. 6(1)(c) GDPR</em>).</li>
+      </ul>
+      <p>Прямий маркетинг і рекламне профілювання <strong>не</strong> використовуються в Neta.</p>
+    </section>
+    <section id="otrimuvachi">
+      <h2>5. Одержувачі даних</h2>
+      <ul>
+        <li><strong>Supabase Inc.</strong> — хостинг БД та автентифікація (обробник).</li>
+        <li>Постачальники інфраструктури (App Store, Google Play — для дистрибуції).</li>
+        <li>Державні органи — за законом.</li>
+      </ul>
+      <p>Ми не продаємо персональні дані третім особам.</p>
+    </section>
+    <section id="zberigannya">
+      <h2>6. Термін зберігання</h2>
+      <ul>
+        <li>Дані облікового запису — до <strong>видалення</strong> (Більше → Обліковий запис → Видалити обліковий запис).</li>
+        <li>Після видалення — повне стирання з БД (каскад), окрім короткочасних резервних копій.</li>
+        <li>Feedback — до розгляду та макс. 24 місяці архіву.</li>
+      </ul>
+    </section>
+    <section id="prava">
+      <h2>7. Ваші права</h2>
+      <p>Ви маєте право на доступ, виправлення, видалення, обмеження, переносимість, заперечення та скаргу до наглядового органу.</p>
+      <p>Видалення в Додатку: <strong>Більше → Обліковий запис → Видалити обліковий запис</strong>. Інші запити: <a href="mailto:kamil@jasinski.app">kamil@jasinski.app</a>.</p>
+    </section>
+    <section id="bezpeka">
+      <h2>8. Безпека</h2>
+      <p>HTTPS/TLS, хешування паролів, Row Level Security у БД (доступ лише до власних рядків), контроль доступу до продакшену.</p>
+    </section>
+    <section id="dity">
+      <h2>9. Діти</h2>
+      <p>Додаток не призначений для осіб молодших 16 років. Ми свідомо не збираємо дані дітей.</p>
+    </section>
+    <section id="zminy">
+      <h2>10. Зміни політики</h2>
+      <p>Ми можемо оновлювати політику в міру розвитку Додатку. Про суттєві зміни повідомимо в Додатку або на цій сторінці.</p>
+    </section>
+    <section id="kontakt-uk">
+      <h2>11. Контакт</h2>
+      <ul>
+        <li>E-mail: <a href="mailto:kamil@jasinski.app">kamil@jasinski.app</a></li>
+        <li>Сайт: <a href="https://jasinski.app">https://jasinski.app</a></li>
+      </ul>
+      <p>Android: <code>app.jasinski.neta</code> · iOS: <code>app.jasinski.neta</code></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 <a href="https://jasinski.app">jasinski.app</a> · <span id="footer-tagline">Neta — Your net profit</span></p>
+  </footer>
+
+  <script>
+    (function () {
+      var LABELS = {
+        pl: {
+          htmlLang: 'pl',
+          title: 'Polityka prywatności — Neta',
+          description: 'Polityka prywatności aplikacji mobilnej Neta — zarządzanie przychodami kierowcy.',
+          tagline: 'Twój zysk netto',
+          headerTitle: 'Polityka prywatności',
+          footer: 'Neta — Twój zysk netto'
+        },
+        en: {
+          htmlLang: 'en',
+          title: 'Privacy Policy — Neta',
+          description: 'Privacy policy for the Neta mobile app — driver earnings and net profit tracking.',
+          tagline: 'Your net profit',
+          headerTitle: 'Privacy Policy',
+          footer: 'Neta — Your net profit'
+        },
+        uk: {
+          htmlLang: 'uk',
+          title: 'Політика конфіденційності — Neta',
+          description: 'Політика конфіденційності мобільного додатку Neta — облік доходів водія.',
+          tagline: 'Ваш чистий прибуток',
+          headerTitle: 'Політика конфіденційності',
+          footer: 'Neta — Ваш чистий прибуток'
+        }
+      };
+
+      function normalizeLang(value) {
+        if (!value) return null;
+        var code = value.toLowerCase().split('-')[0];
+        return LABELS[code] ? code : null;
+      }
+
+      function detectLang() {
+        var params = new URLSearchParams(window.location.search);
+        // Same as app: ?lang= → saved choice → browser (pl/uk/en only) → English.
+        return normalizeLang(params.get('lang'))
+          || normalizeLang(localStorage.getItem('neta-privacy-lang'))
+          || normalizeLang(navigator.language)
+          || 'en';
+      }
+
+      function setLang(lang) {
+        if (!LABELS[lang]) lang = 'en';
+        var labels = LABELS[lang];
+
+        document.documentElement.lang = labels.htmlLang;
+        document.title = labels.title;
+        document.getElementById('meta-description').setAttribute('content', labels.description);
+        document.getElementById('header-tagline').textContent = labels.tagline;
+        document.getElementById('header-title').textContent = labels.headerTitle;
+        document.getElementById('footer-tagline').textContent = labels.footer;
+
+        document.querySelectorAll('.lang-panel').forEach(function (panel) {
+          panel.hidden = panel.getAttribute('data-lang') !== lang;
+        });
+
+        document.querySelectorAll('.lang-switch button').forEach(function (btn) {
+          btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+        });
+
+        localStorage.setItem('neta-privacy-lang', lang);
+
+        var url = new URL(window.location.href);
+        url.searchParams.set('lang', lang);
+        history.replaceState(null, '', url);
+      }
+
+      document.querySelectorAll('.lang-switch button').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          setLang(btn.getAttribute('data-lang'));
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      });
+
+      setLang(detectLang());
+    })();
+  </script>
 </body>
 </html>
