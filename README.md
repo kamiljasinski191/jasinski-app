@@ -1,18 +1,22 @@
-# privacy.jasinski.app
+# jasinski.app
 
-Static Neta legal pages on GitHub Pages.
+Static site for [jasinski.app](https://jasinski.app), hosted on GitHub Pages.
 
-## URLs
+## Live paths
 
-- `https://privacy.jasinski.app/` — Privacy Policy
-- `https://privacy.jasinski.app/neta/privacy/` — same page (compat path)
+- `/` — temporary landing
+- `/neta/privacy/` — Neta privacy policy (PL / EN / UK)
 
-## DNS (Squarespace — custom record only)
+## DNS
 
-Do **not** edit Squarespace Defaults. Add a custom record:
+Apex `jasinski.app` → GitHub Pages A records:
 
 | Type | Host | Value |
 |------|------|-------|
-| CNAME | `privacy` | `kamiljasinski191.github.io` |
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| CNAME | `www` | `kamiljasinski191.github.io` |
 
-Then wait for DNS + GitHub HTTPS.
+Remove the old Squarespace A record (`198.185.159.144`) so it does not override GitHub.
